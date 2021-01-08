@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0" metadata-complete="false">
+	<display-name>MessagingWebAppV2</display-name>
+	<welcome-file-list>
+		<welcome-file>Login.jsp</welcome-file>
+	</welcome-file-list>
+
+	<context-param>
+		<param-name>dbURL</param-name>
+		<param-value>jdbc:mysql://localhost/mysql_db</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbUser</param-name>
+		<param-value>mysql_user</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbUserPwd</param-name>
+		<param-value>mysql_pwd</param-value>
+	</context-param>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/view/error/AccessDenied.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>405</error-code>
+		<location>/WEB-INF/view/error/AccessDenied.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/view/error/AccessDenied.jsp</location>
+	</error-page>
+
+</web-app>
